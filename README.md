@@ -1,4 +1,6 @@
-# Tictactoe
+# GDSC Workshop 7 (Angular + Typescript)
+## Ran by: Daniel Henricks
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
 

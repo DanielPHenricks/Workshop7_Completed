@@ -1,0 +1,19 @@
+<div *ngIf="!formSubmitted">
+    <form (ngSubmit)="onSubmit()">
+        <h2>Select your class standing:</h2>
+        <div *ngFor="let option of classOptions">
+            <input type="radio" name="classOption" [(ngModel)]="numClassStanding" [value]="option.value">
+            <label>{{option.label }}</label>
+        </div>
+        <h2>Enter how many swipes you have left:</h2>
+        <input type="number" name="numInput" [(ngModel)]="count">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div *ngIf="formSubmitted">
+    <h2>You have used {{swipesUsed}} swipes.</h2>
+    <h2>You are expected to have used {{calculateExpectedMealsUsed()}} swipes.</h2>
+    <h2>You have {{calculateExpectedMealsUsed() - swipesUsed}} extra swipes.</h2>
+    <h2>You can use {{swipesPerWeek()}} swipes per week for the rest of the semester.</h2>
+</div>
